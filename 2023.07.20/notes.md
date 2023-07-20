@@ -47,7 +47,7 @@
 * Submit the workflow:
 
   ```bash
-  matflow-dev go simple_damask_texture.yml
+  matflow-dev go simple_damask_texture.yaml
   ```
 
 * Things to try:
@@ -71,7 +71,7 @@
 * Submit the workflow:
 
   ```bash
-  matflow-dev go simple_damask_texture.yml
+  matflow-dev go simple_damask_texture_compare.yaml
   ```
 
 * Wait for the workflow to finish, and then zip it up:
