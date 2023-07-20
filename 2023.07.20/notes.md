@@ -79,3 +79,4 @@
   ```bash
   matflow-dev zip WORKFLOW_ID
   ```
+* Download the zipped workflow to your local machine, and then load it in the demo Jupyter notebook.
