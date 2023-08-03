@@ -36,16 +36,16 @@
 
 * Look at the output from this command. Under the `meta-data` heading, you should see an entry called: `config_invocation_key`. This should identify as `CSF3`.
 
-## Example workflow 1: `fit_yield_functions.yml`
+## Example workflow 1: `fit_yield_funcs.yml`
 
 * Copy the workflow from the shared location to somewhere on your scratch directory:
 
   ```bash
-  cp /mnt/eps01-rds/jf01-home01/shared/software/matflow_workflows/fit_yield_functions.yaml ~/scratch
+  cp /mnt/eps01-rds/jf01-home01/shared/software/matflow_workflows/fit_yield_funcs.yaml ~/scratch
   ```
 
 * Submit the workflow:
 
   ```bash
-  matflow-dev go fit_yield_functions.yaml
+  matflow-dev go fit_yield_funcs.yaml
   ```
