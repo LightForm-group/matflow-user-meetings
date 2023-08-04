@@ -1,0 +1,63 @@
+- name: damask_parse_env
+  setup: |
+    module purge
+    source /mnt/eps01-rds/jf01-home01/shared/software/matflow_conda_envs/damask_parse_env_mf_a39_dp_2.23_d_3a7/bin/activate
+  executables:
+    - label: python_script
+      instances:
+        - command: /mnt/eps01-rds/jf01-home01/shared/software/matflow_conda_envs/damask_parse_env_mf_a39_dp_2.23_d_3a7/bin/python <<script_name>> <<args>>
+          num_cores: 1
+          parallel_mode: null
+
+- name: formable_env
+  setup: |
+    module purge
+    source /mnt/eps01-rds/jf01-home01/shared/software/matflow_conda_envs/formable_env_mf_a39_f_1.20/bin/activate
+  executables:
+    - label: python_script
+      instances:
+        - command: /mnt/eps01-rds/jf01-home01/shared/software/matflow_conda_envs/formable_env_mf_a39_f_1.20/bin/python <<script_name>> <<args>>
+          num_cores: 1
+          parallel_mode: null
+
+- name: damask_env
+  setup: |
+    module load mpi/intel-18.0/openmpi/4.1.0
+    IMG_PATH=/mnt/eps01-rds/jf01-home01/shared/software/DAMASK-docker-images/damask-grid_3.0.0-alpha7.sif
+  executables:
+    - label: damask_grid
+      instances:
+        - command: singularity run $IMG_PATH
+          num_cores: 1
+          parallel_mode: null
+        - command: mpirun -n $NSLOTS singularity run $IMG_PATH
+          num_cores:
+            start: 2
+            stop: 32
+          parallel_mode: null
+
+- name: matlab_env
+  setup: |
+    module load apps/binapps/matlab/R2019a
+    module load apps/binapps/matlab/third-party-toolboxes/mtex/5.3
+  executables:
+
+    - label: compile_mtex
+      instances:
+        - command: compile-mtex <<script_name>> <<args>>
+          num_cores: 1
+          parallel_mode: null
+
+    - label: run_compiled_mtex
+      instances:
+        - command: ./run_<<script_name>>.sh $MATLAB_HOME <<args>>
+          num_cores: 1
+          parallel_mode: null
+
+- name: python_env
+  executables:
+    - label: python_script
+      instances:
+        - command: python <<script_name>> <<args>>
+          num_cores: 1
+          parallel_mode: null
