@@ -1,0 +1,11 @@
+5. Demonstrate loop termination conditions
+
+- set up an MTEX environment locally
+- demonstrate how to submit a subset of tasks
+- demonstrate how to continue a workflow on another machine
+- demonstrate aborting a run (sequence with a small and v. large grid size) 
+  - show task schema where abortability is specified
+- demo-workflow CLI and API
+- may need to set up config on csf3?
+- loops with terminations criterion?
+- run fit yield function workflow - show structure is different (using input sources now) - then zip, download, unzip, add another element set to fit to another yield point?
