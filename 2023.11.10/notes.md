@@ -3,7 +3,6 @@
 - added more demonstration workflows: use `matflow-dev demo-workflow --list` to list available workflows
   - demo workflows are listed on the docs site: https://docs.matflow.io/stable/reference/workflows.html 
 - added `fit_single_crystal_parameters` workflow
-- `abort-run` command is fixed!
 
 # Set up on the CSF
 
