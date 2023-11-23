@@ -3,6 +3,11 @@
 ## Check version
 
 - Check the version of MatFlow with `matflow-dev --version` (should be the latest version: `v0.3.0a101`).
+- If not, check you have this in your `~/.bashrc` file:
+
+  ```
+  export PATH="$PATH:/mnt/eps01-rds/jf01-home01/shared/software/matflow_exes"
+  ```
 
 ## Check if you need to configure MatFlow on CSF3
 
