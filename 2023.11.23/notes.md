@@ -33,6 +33,9 @@
 
 - List of task schemas ported over: https://github.com/hpcflow/matflow-new/blob/develop/README.md
 - Task schemas info on docs website improved (https://docs.matflow.io/stable/reference/template_components/task_schemas.html)
+
+## New things
+
 - added task schemas:
   - `sample_texture_from_model_ODF` (MTEX)
   - `generate_volume_element_from_statistics` (Dream3D) - but cannot pass `orientations` or `precipitates` yet
