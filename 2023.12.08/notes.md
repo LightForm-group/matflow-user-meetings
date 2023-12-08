@@ -2,7 +2,7 @@
 
 ## Check version
 
-- Check the version of MatFlow with `matflow-dev --version` (should be the latest version: `xxxxxx`).
+- Check the version of MatFlow with `matflow-dev --version` (should be the latest version: `v0.3.0a107`).
 - If not, check you have this in your `~/.bashrc` file:
 
   ```
